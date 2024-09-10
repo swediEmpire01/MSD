@@ -1,0 +1,113 @@
+@media (max-width: 850px) {
+    /* The Nav  */
+    nav.header {
+        padding: 5px;
+    }
+    header nav ul a {
+        display: none;
+    }
+    header ul img, aside ul img {
+        display: block; /* Changed from flex to block */
+        height: 40px;
+        position: absolute;
+        top: 8px;
+        right: 5px;
+        cursor: pointer;
+    }
+
+    div.drk-side {
+        position: fixed;
+        z-index: 11;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Changed from 120vh to 100% */
+        background-color: hsla(0, 0%, 60%, 0.2);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px); 
+        display: none;
+    }
+
+    aside {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        right: 0;
+        padding: 5px;
+        top: 0;
+        width: 280px;
+        height: 100%; /* Changed from 105vh to 100% */
+        background-color: #fff;
+        z-index: 12;
+    }
+
+    aside ul {
+        padding: 5px;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 19px;
+        margin-top: 40px;
+    }
+    aside ul li { 
+        margin: 0 0 20px 0;
+    }
+    aside ul a { 
+        font-size: 19px;
+    }
+    
+    /* The Hero Section */
+
+    nav h1, div.text-block h1 {
+        font-size: 3.5em;
+    }
+    div.text-block {
+        width: 100%;
+        height: 75%;
+        background: linear-gradient(to bottom, #fff 70%, transparent);
+    }
+    nav h1 {
+        font-size: 2em;
+    }
+    /* The hero Section */
+    section.hero h1{
+        font-size: 4em;
+    }
+
+    section.hero h3{
+        font-size: 14px;
+    }
+
+    section.hero button {
+        display: flex;
+        width: 200px;
+        height: 50px;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+
+    section.contact-me {
+        flex-direction: column;
+    }
+    /* The Merch Section */
+    div.merch-container{
+        max-width: 100vw;
+    }
+    div.product{
+        max-width: 360px;
+    }
+    div.product-description{
+        max-width: 360px;
+    }
+    /* About Section */
+    div.about-section{
+        max-width: 360px;
+    }
+}
+@media (max-width: 500px) {
+    section.hero h1{
+        line-height: 1;
+        font-size: 3em;
+    }
+
+}
