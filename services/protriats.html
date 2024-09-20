@@ -83,14 +83,50 @@
     </section>
     <main class="gallery">
         <div class="img-projects">
-            <div class="tall">
-                <img src="../assets/protriats/img-1.png" alt="protiat-photo">
+            <div >
+                <img src="../assets/protriats/img-01.png" alt="protiat-photo">
             </div>
-            <div class="wide">
-                <img src="https://cdn.shopify.com/s/files/1/0198/2595/0782/products/emeraldgreenbridesmaiddresses_1_cc332d38-7724-4999-aae6-4e2449ae1ce8_2048x2048.jpg" alt="">
+            <div >
+                <img src="../assets/protriats/img-1.png" alt="">
             </div>
             <div>
-                <img src="https://i.pinimg.com/736x/44/a4/3c/44a43cfbf5188798fb47b91d493217b7.jpg" alt="">
+                <img src="../assets/protriats/img-2.png" alt="">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-3.png" alt="protiat-photo">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-4.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/protriats/img-5.png" alt="">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-6.png" alt="protiat-photo">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-7.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/protriats/img-8.png" alt="">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-9.png" alt="protiat-photo">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-10.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/protriats/img-11.png" alt="">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-12.png" alt="protiat-photo">
+            </div>
+            <div >
+                <img src="../assets/protriats/img-13.png" alt="">
+            </div>
+            <div>
+                <img src="../assets/protriats/img-14.png" alt="">
             </div>
         </div>
     </main>
@@ -132,4 +168,24 @@
     </footer>
 </body>
 <script src="./main.js"></script>
+<script>
+    const divBoxes = document.querySelector(".img-projects").childNodes;
+    divBoxes.forEach((box) => {
+        if(box.localName == "div"){
+            const basicDimension= 375;
+            // The Images Dimensions
+            let width = box.childNodes[1].naturalHeight;
+            let height = box.childNodes[1].naturalWidth;
+            
+
+            if(width <= height){
+                box.style.height  = basicDimension/(height/ width)  + "px";
+                box.style.width = basicDimension + "px";
+            }else{
+                box.style.width = basicDimension/ (width/ height)   + "px";
+                box.style.height = basicDimension + "px";
+            }
+        }
+    })
+</script>
 </html>
