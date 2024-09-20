@@ -95,7 +95,7 @@
             <div >
                 <img src="../assets/protriat/img-4.png" alt="">
             </div>
-            <div>
+            <div class="wide">
                 <img src="../assets/protriat/img-5.png" alt="">
             </div>
             <div >
@@ -174,14 +174,15 @@
             let width = box.childNodes[1].naturalHeight;
             let height = box.childNodes[1].naturalWidth;
             
-
+            // The Span effect
             if(width <= height){
-                box.style.height  = basicDimension/(height/ width)  + "px";
-                box.style.width = basicDimension + "px";
+                box.style.gridColumn  = `span ${Math.floor(1/(height/ width))}` ;
+                box.style.gridRow = "span 1";
             }else{
-                box.style.width = basicDimension/ (width/ height)   + "px";
-                box.style.height = basicDimension + "px";
+                box.style.gridColumn  = `span 1` ;
+                box.style.gridRow = `span ${1/(Math.floor(width/ height))}`;
             }
+            console.log(box.style)
         }
     })
 </script>
