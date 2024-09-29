@@ -146,12 +146,36 @@ div.img-projects{
     grid-auto-flow: dense;
     width:max-content ;
 }
+div.img-projects .wide{
+    grid-column: span 2;
+}
+div.img-projects .tall{
+    grid-row: span 2;
+}
+div.img-projects .big{
+    grid-row: span 2;
+    grid-column:span 2 ;
+}
+
 
 /* Comment section ############### */
+section.contact-me{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 80px 10px 10px;
+}
 
 div.contact-text{
-    max-width: 400px;
     height: max-content;
+    max-width: 400px;
+    
+}
+
+div.contact-text img{
+    max-width: 400px;
     
 }
 
@@ -173,6 +197,7 @@ div.service  h2{
     color: #0d4736;
     font-family: "Roboto";
 }
+
 div.service  p{
     width: 100%;
     font-size: 16px;
