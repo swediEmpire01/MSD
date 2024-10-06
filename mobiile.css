@@ -103,3 +103,18 @@
         max-width: 360px;
     }
 }
+
+@media (max-width: 600px) {
+    div.img-projects {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    div.img-projects .wide,
+    div.img-projects .tall,
+    div.img-projects .big {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+}
