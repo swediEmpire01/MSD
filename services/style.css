@@ -177,7 +177,8 @@ div.contact-text{
 
 div.contact-text img{
     max-width: 400px;
-    border-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     
 }
 
