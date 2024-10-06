@@ -205,25 +205,4 @@
     </footer>
 </body>
 <script src="./main.js"></script>
-<script>
-    const divBoxes = document.querySelector(".img-projects").childNodes;
-    divBoxes.forEach((box) => {
-        if(box.localName == "div"){
-            const basicDimension= 375;
-            // The Images Dimensions
-            let width = box.childNodes[1].naturalHeight;
-            let height = box.childNodes[1].naturalWidth;
-            
-            // The Span effect
-            if(width <= height){
-                box.style.gridColumn  = `span ${Math.floor(1/(height/ width))}` ;
-                box.style.gridRow = "span 1";
-            }else{
-                box.style.gridColumn  = `span 1` ;
-                box.style.gridRow = `span ${1/(Math.floor(width/ height))}`;
-            }
-            console.log(box.style)
-        }
-    })
-</script>
 </html>
