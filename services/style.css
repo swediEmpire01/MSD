@@ -59,7 +59,7 @@ nav ul a::after {
 nav ul a:hover::after {
     width: 100%;
 }
-/* This i sthe Hero Section */
+/* This is the Hero Section */
 section.hero{
     height: 100vh;
     width: 100%;
@@ -177,6 +177,7 @@ div.contact-text{
 
 div.contact-text img{
     max-width: 400px;
+    border-radius: 15px;
     
 }
 
