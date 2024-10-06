@@ -145,6 +145,7 @@ div.img-projects{
     grid-auto-rows:max-content;
     grid-auto-flow: dense;
     width:max-content ;
+    padding: 25px;
 }
 div.img-projects .wide{
     grid-column: span 2;
