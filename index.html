@@ -383,18 +383,18 @@
 
         Email.send({
             Host: "smtp.gmail.com",
-            Username: "sender@email_address.com",
-            Password: "Enter your password",
+            Username: "vanluke19@gmail.com",
+            Password: "Vanlukemi11",
             To: 'yvanlukendo11@gmail.com',
-            From: "sender@email_address.com",
+            From: "vanluke19@gmail.com",
             Subject: "Morning Studio Client Message",
             Body: `Hi I am ${firstName} ${sureName} and I wrote a message that follows : 
                     ${message} ; P.S my contact info follows as ${contactInfo}`,
-            Attachments: [
+            /*Attachments: [
                 {
                     name: "File_Name_with_Extension",
                     path: "Full Path of the file"
-                }]
+                }]*/
         })
             .then(function (message) {
                 alert("Mail has been sent successfully")
