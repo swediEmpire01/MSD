@@ -21,9 +21,15 @@ addEventListener('click', e =>{
 
 // code useed to send an email 
 
+const button= document.getElementById("session-pointer");
+button.addEventListener("click", e=>{
+    e.preventDefault();
+    sendEmail();
+})
+
 function sendEmail() {
-    const message= document.getElementById("mmessage");
-    const name= document.getElementById("name") + " " + document.getElementById("surename");
+    const message= document.getElementById("mmessage").value;
+    const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
     const email= "husseniswedi2@gmail.com"
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
