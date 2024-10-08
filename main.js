@@ -23,24 +23,25 @@ addEventListener('click', e =>{
 
 const button= document.getElementById("session-pointer");
 button.addEventListener("click", e=>{
-    e.preventDefault();
+    document.preventDefault();
     sendEmail();
 })
 
 function sendEmail() {
     const message= document.getElementById("mmessage").value;
     const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
-    const email= "husseniswedi2@gmail.com"
+    const email= "husseniswedi2@gmail.com";
+    const username= "Husseni Swedi";
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.set('Authorization', 'Basic ' + btoa('bfe5c145ea962c7778a2a4a252b25cb9'+":" +'1135eea87a60ee3aab695ca423316629'));
   
     const data = JSON.stringify({
       "Messages": [{
-        "From": {"Email": "vanluke19@gmail.com", "Name": "Morning Studio Client"},
-        "To": [{"Email": email, "Name": name}],
+        "From": {"Email": "vanluke19@gmail.com", "Name": "Morning Studio Client "},
+        "To": [{"Email": email, "Name": username}],
         "Subject": "Client Request From Website",
-        "TextPart": message
+        "TextPart": message + " From " + name
       }]
     });
   
