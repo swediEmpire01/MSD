@@ -30,30 +30,15 @@ button.addEventListener("click", (event) => {
 function sendEmail() {
     const message= document.getElementById("mmessage").value;
     const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
-    const email= "husseniswedi2@gmail.com";
-    const username= "Husseni Swedi";
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.set('Authorization', 'Basic ' + btoa('bfe5c145ea962c7778a2a4a252b25cb9'+":" +'1135eea87a60ee3aab695ca423316629'));
-  
-    const data = JSON.stringify({
-      "Messages": [{
-        "From": {"Email": "vanluke19@gmail.com", "Name": "Morning Studio Client "},
-        "To": [{"Email": email, "Name": username}],
-        "Subject": "Client Request From Website",
-        "TextPart": message + " From " + name
-      }]
-    });
-  
-    const requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: data,
-    };
-  
-    fetch("https://api.mailjet.com/v3.1/send", requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
-      .then(alert("Message is sent "))
-      .catch(error => console.log('error', error));
+    emailjs.send("service_zqmy47w","template_ttscy6c",{
+      from_name: "MorningStudio Client : " + name,
+      message: message,
+      }).then(
+        (response) => {
+          alert('Message succesfully sent!');
+        },
+        (error) => {
+          alert('FAILED...', error);
+        },
+      );;
   }
