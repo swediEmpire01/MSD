@@ -22,10 +22,10 @@ addEventListener('click', e =>{
 // code useed to send an email 
 
 const button= document.getElementById("session-pointer");
-button.addEventListener("click", e=>{
-    document.preventDefault();
-    sendEmail();
-})
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+  sendEmail();
+});
 
 function sendEmail() {
     const message= document.getElementById("mmessage").value;
@@ -54,5 +54,6 @@ function sendEmail() {
     fetch("https://api.mailjet.com/v3.1/send", requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
+      .then(alert("Message is sent "))
       .catch(error => console.log('error', error));
   }
