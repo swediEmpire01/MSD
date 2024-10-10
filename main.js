@@ -33,7 +33,7 @@ function sendEmail() {
     const contact= document.getElementById("contact").value;
     emailjs.send("service_zqmy47w","template_ttscy6c",{
       to_name: "MorningStudio",
-      from_name:  name + " : " + contact,
+      from_name:  `${name}  :  ${contact}`,
       message: message,
       }).then(
         (response) => {
