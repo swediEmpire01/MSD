@@ -31,6 +31,7 @@ function sendEmail() {
     const message= document.getElementById("mmessage").value;
     const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
     const contact= document.getElementById("contact").value;
+    
     emailjs.send("service_zqmy47w","template_ttscy6c",{
       to_name: "MorningStudio",
       from_name:  `${name}  :  ${contact}`,
@@ -40,7 +41,7 @@ function sendEmail() {
           alert('Message succesfully sent!');
         },
         (error) => {
-          alert('FAILED...', error);
+          alert('FAILED...', JSON.stringify(error));
         },
       );;
   }
