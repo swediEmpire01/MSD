@@ -17,20 +17,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-           emailjs.init({
-             publicKey: "K508N2LJrLHzNv7kJ",
-             blockHeadless: true,
-             blockList: {
-               list: ['foo@emailjs.com', 'bar@emailjs.com'],
-               watchVariable: 'userEmail',
-             },
-             limitRate: {
-               id: 'app',
-               throttle: 10000,
-             },
-           });
+          emailjs.init("K508N2LJrLHzNv7kJ");
         })();
-     </script>
+      </script>
+      
 </head>
 <body>
     <div class="drk-side"></div>

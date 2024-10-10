@@ -30,8 +30,11 @@ button.addEventListener("click", (event) => {
 function sendEmail() {
     const message= document.getElementById("mmessage").value;
     const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
+    const contact= document.getElementById("contact").value;
     emailjs.send("service_zqmy47w","template_ttscy6c",{
-      from_name: "MorningStudio Client : " + name,
+      contact_info: contact ,
+      to_name: "MorningStudio",
+      from_name:  name,
       message: message,
       }).then(
         (response) => {
