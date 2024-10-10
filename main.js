@@ -32,9 +32,8 @@ function sendEmail() {
     const name= document.getElementById("name").value + " " + document.getElementById("surename").value;
     const contact= document.getElementById("contact").value;
     emailjs.send("service_zqmy47w","template_ttscy6c",{
-      contact_info: contact ,
       to_name: "MorningStudio",
-      from_name:  name,
+      from_name:  name + " : " + contact,
       message: message,
       }).then(
         (response) => {
