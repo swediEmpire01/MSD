@@ -101,7 +101,7 @@ div.text-block h1{
     background-clip: text;
     color: transparent;
     margin: 10px 0 20px;
-    font-family: "Bebas Neue";
+    font-family: "Montserrat","Bebas Neue", sans-serif;
     height: max-content;
 }
 div.text-block p{
@@ -447,6 +447,7 @@ div.colors span{
 }
 
 /* Abot me Section */
+
 div.about-container,
 div.about-section {
     display: flex;
@@ -482,7 +483,7 @@ div.about-description h3 {
     font-size: 4em;
     color: #1d1d1f;
     margin-bottom: 20px;
-    font-family: "Bebas Neue";
+    font-family: "Montserrat", "Bebas Neue", sans-serif;
 }
 
 div.about-description p {
