@@ -132,12 +132,12 @@ section.hero  button:hover{
     color: #0d4736;
     transition: 0.5s;
 }
-section.hero  button#session-pointer{
+section.hero  button#book-button{
     background-color: #0d4736 ;
     color: #fff;
     border: solid 2px #0d4736;
 }
-section.hero  button#session-pointer:hover{
+section.hero  button#book-button:hover{
     background-color: transparent;
     color: #0d4736;
 }
